@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Viewer for Draw2d Figure
+Bundle-SymbolicName: org.eclipse.draw2d.preview;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: org.eclipse.draw2d.preview.Activator
+Bundle-Vendor: Eclipse.org
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.pde.launching;bundle-version="3.6.0",
+ org.eclipse.jdt.core;bundle-version="3.7.1",
+ org.eclipse.core.resources;bundle-version="3.7.100",
+ org.eclipse.draw2d;bundle-version="3.7.1"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Bundle-Localization: plugin
