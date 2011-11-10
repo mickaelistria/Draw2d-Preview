@@ -1,8 +1,8 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Viewer for Draw2d Figure
+Bundle-Name: Preview iewer for Draw2d Figure
 Bundle-SymbolicName: org.eclipse.draw2d.preview;singleton:=true
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 0.0.1.qualifier
 Bundle-Activator: org.eclipse.draw2d.preview.Activator
 Bundle-Vendor: Eclipse.org
 Require-Bundle: org.eclipse.ui,

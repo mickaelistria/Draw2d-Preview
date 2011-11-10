@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.eclipse.draw2d.tooling_0.0.1.qualifier.jar" id="org.eclipse.draw2d.tooling" version="0.0.1.qualifier">
+      <category name="Draw2d Tooling"/>
+   </feature>
+   <category-def name="Draw2d Tooling" label="Draw2d Tooling">
+      <description>
+         Tools to facilitate the usage and development of the Draw2d API. Provides preview.
+      </description>
+   </category-def>
+</site>
