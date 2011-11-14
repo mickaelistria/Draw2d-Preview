@@ -31,6 +31,7 @@ import org.eclipse.core.runtime.Status;
 import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.draw2d.FigureCanvas;
 import org.eclipse.draw2d.IFigure;
+import org.eclipse.draw2d.RectangleFigure;
 import org.eclipse.jdt.core.IClassFile;
 import org.eclipse.jdt.core.IClasspathEntry;
 import org.eclipse.jdt.core.ICompilationUnit;
@@ -56,6 +57,7 @@ import org.eclipse.ui.PlatformUI;
  */
 public class OpenFigureViewerHandler extends AbstractHandler {
 
+
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
 		IWorkbenchWindow activeWorkbenchWindow = PlatformUI.getWorkbench().getActiveWorkbenchWindow();
@@ -70,12 +72,23 @@ public class OpenFigureViewerHandler extends AbstractHandler {
 			shell.setText(Messages.bind(Messages.previewTitle, figureObject.getClass().getSimpleName()));
 			shell.setLayout(new GridLayout(1, false));
 			FigureCanvas canvas = new FigureCanvas(shell);
-			canvas.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
+			GridData canvasLayoutData = new GridData();
+			canvasLayoutData.grabExcessHorizontalSpace = true;
+			canvasLayoutData.grabExcessVerticalSpace = true;
+			canvasLayoutData.horizontalAlignment = SWT.FILL;
+			canvasLayoutData.verticalAlignment = SWT.FILL;
+			canvas.setLayoutData(canvasLayoutData);
 			canvas.setBackground(ColorConstants.white);
-			/*RectangleFigure background = new RectangleFigure();
-			background.setLayoutManager(new XYLayout());
-			background.add(figureObject);*/
-			canvas.setContents(figureObject);
+			RectangleFigure background = new RectangleFigure();
+			background.setForegroundColor(ColorConstants.white);
+			background.setBackgroundColor(ColorConstants.white);
+			org.eclipse.draw2d.GridLayout rectangleLayout = new org.eclipse.draw2d.GridLayout();
+			background.setLayoutManager(rectangleLayout);
+			rectangleLayout.marginHeight = 10;
+			rectangleLayout.marginWidth = 10;
+			background.add(figureObject, new org.eclipse.draw2d.GridData(SWT.FILL, SWT.FILL, true, true));
+			canvas.setContents(background);
+			shell.pack();
 			shell.open();
 		}
 
