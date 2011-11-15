@@ -4,10 +4,30 @@ This project is a basic implementation of a Draw2d preview tool that allows you 
 
 == Install ==
 
-* Get the branch
-* mvn clean install
-* A p2 repository is ready to get consumed in repository/org.eclips.draw2d.tooling-repository/target/repository
+From the Eclipse update site manager, add the following URL: https://raw.github.com/mickaelistria/Draw2d-Preview/master/repository/built
 
-== Usage ==
+== Use ==
 
-Right click on a Java class in Project Navigator. Then you see a "Preview Draw2d figure" entry. Click it and enjoy.
+Right click on a Java class in Project Navigator. Then you see a "Preview Draw2d figure" entry. Click it and see your figures.
+
+== Contribute ==
+
+=== Report issues ===
+
+Use the GitHub issues service: https://github.com/mickaelistria/Draw2d-Preview/issues
+
+=== Build ===
+
+Simply "mvn clean install"
+
+=== Get patches integrated ===
+
+Preferred way is to use a Pull Request.
+
+=== Release ===
+
+All installs come from the same URL which is the repository/built folder on the master branch. To release a new version, simply run a build and then copy the repository/org.eclipse.draw2d.tooling-repository/target/repository content into the repository/built folder.
+
+== Need support ? ==
+
+There is currently no official support for this tool. If you wish to get some, get in touch with the author (Mickael Istria).
