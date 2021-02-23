@@ -31,3 +31,5 @@ All installs come from the same URL which is the repository/built folder on the 
 == Need support ? ==
 
 There is currently no official support for this tool. If you wish to get some, open issues on this repository.
+
+[https://mickaelistria.github.io/redirctToEclipseIDECloneCommand/redirect.html clone to Eclipse IDE]
